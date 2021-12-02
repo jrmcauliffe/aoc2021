@@ -16,8 +16,13 @@ risingDiffCount depths =
 risingDiffWindowCount : List Int -> Int
 risingDiffWindowCount depths =
     let
-        window1 = depths
-        window2 = window1 |> List.tail |> Maybe.withDefault []
-        window3 = window2 |> List.tail |> Maybe.withDefault []
+        window1 =
+            depths
+
+        window2 =
+            window1 |> List.tail |> Maybe.withDefault []
+
+        window3 =
+            window2 |> List.tail |> Maybe.withDefault []
     in
     List.map3 (\a -> \b -> \c -> a + b + c) window1 window2 window3 |> risingDiffCount
