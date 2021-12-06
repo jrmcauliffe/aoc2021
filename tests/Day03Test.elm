@@ -1041,6 +1041,6 @@ suite =
             , test "Given Example Life Support Rating" <|
                 \_ -> example1 |> parseReport |> (\r -> Maybe.map2 (*) (r |> oxy |> Maybe.map toDecimal) (r |> cO2 |> Maybe.map toDecimal)) |> equal (Just 230)
             , test "Problem" <|
-                \_ -> problem |> parseReport |> (\r -> Maybe.map2 (*) (r |> oxy |> Maybe.map toDecimal) (r |> cO2 |> Maybe.map toDecimal)) |> equal (Just 230)
+                \_ -> problem |> parseReport |> (\r -> Maybe.map2 (*) (r |> oxy |> Maybe.map toDecimal) (r |> cO2 |> Maybe.map toDecimal)) |> equal (Just 4550283   )
             ]
         ]
